@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = 'String Utils including a specialized #titleize.'
   spec.description   = 'A set of utils narrowly written to support Public.Law. Focus on reducing object instantation at the cost of readability.'
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.homepage      = "https://github.com/public-law/law_string"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
