@@ -12,6 +12,10 @@ class String
   INITIALS_REGEX  = /^([a-zA-Z]\.)+$/
   WHITESPACES_REGEX = /[[:space:]]/
 
+  def in?(an_array)
+    an_array.include?(self)
+  end
+
   def initials?
     INITIALS_REGEX.match?(self)
   end
@@ -30,7 +34,7 @@ class String
 
   #
   # A better titleize that creates a usable title according to English grammar
-  # rules. It's coded to reduce object allocation. 
+  # rules. It's coded to reduce object allocation.
   #
   def titleize
     new_string = self.clone(freeze: false)

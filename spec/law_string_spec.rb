@@ -7,6 +7,14 @@ require 'law_string'
 RSpec.describe String do
   it { should be_an_instance_of(String) }
 
+  describe '#in?' do
+    it 'gives same positive result as include?' do
+      array  = [1, 2, 3, 4, 5]
+      string = 'I am 4 years old'
+      expect(string.in?(array)).to eq(array.include?(string))
+    end
+  end
+
   describe '#add_typography' do
     it 'leaves a boring string alone' do
       expect('snurk'.add_typography).to eq 'snurk'
