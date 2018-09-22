@@ -26,7 +26,8 @@ Or install it yourself as:
 Provides;
 
 * `#add_typograpy` e.g., changing ASCII quotes to true double quotes
-* `#titleize` enhanced for English-language legal texts
-* `#initials` to detect, e.g., "A.S.C.A.P."
+* `#initialism?` to detect, e.g., "ATM". Very rudimentary.
+* `#initials?` to detect, e.g., "A.S.C.A.P."
+* `#titleize` enhanced for English-language legal texts, coded to reduce memory allocations.
 
 See the tests for details.
