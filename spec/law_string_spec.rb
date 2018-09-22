@@ -1,3 +1,4 @@
+# coding: utf-8
 # rubocop:disable Metrics/BlockLength, Style/FrozenStringLiteralComment
 
 require 'spec_helper'
@@ -33,10 +34,24 @@ RSpec.describe String do
     end
   end
 
+  describe '#capitalize_first_letter' do
+    it 'handles an all-lowercase word' do
+      expect('apple'.capitalize_first_letter).to eq 'Apple'
+    end
+
+    it 'leaves an all-uppercase word unchanged' do
+      expect('APPLE'.capitalize_first_letter).to eq 'APPLE'
+    end
+
+    it 'handles empty string' do
+      expect(''.capitalize_first_letter).to eq ''
+    end
+  end
+
   describe '#starts_with?' do
     it 'answers queries about the first letter' do
-      expect('Mellow'.start_with?('M')).to be true
-      expect('Mellow'.start_with?('x')).to be false
+      expect('Mellow'.starts_with?('M')).to be true
+      expect('Mellow'.starts_with?('x')).to be false
     end
   end
 
