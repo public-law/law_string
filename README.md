@@ -30,4 +30,4 @@ Provides;
 * `#initials?` to detect, e.g., "A.S.C.A.P."
 * `#titleize` enhanced for English-language legal texts, coded to reduce memory allocations.
 
-See the tests for details.
+See [the tests](https://github.com/public-law/law_string/blob/master/spec/law_string_spec.rb) for details.
