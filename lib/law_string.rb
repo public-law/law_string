@@ -9,8 +9,8 @@ class String
   NOT_CAPITALIZED = Set.new %w[a an and at but by for in nor of on or out so the to up yet].freeze
   INITIALISMS     = Set.new %w[atm].freeze
 
-  INITIALS_REGEX  = /^([a-zA-Z]\.)+$/
-  WHITESPACES_REGEX = /[[:space:]]/
+  INITIALS_REGEX  = /^([a-zA-Z]\.)+$/.freeze
+  WHITESPACES_REGEX = /[[:space:]]/.freeze
 
   def in?(an_array)
     an_array.include?(self)
@@ -37,7 +37,7 @@ class String
   # rules. It's coded to reduce object allocation.
   #
   def titleize
-    new_string = self.clone(freeze: false)
+    new_string = clone(freeze: false)
 
     new_string.tr!('_', ' ')
     final_string = new_string.split(WHITESPACES_REGEX)
@@ -83,7 +83,7 @@ class String
   end
 
   #
-  # Return a new string enhanced with typographic characters:
+  # Return a new string enhanced with UTF-8 typographic characters:
   #  Single quotes: ’
   #  Section sign:  §
   #  Double quotes: “”
@@ -92,6 +92,10 @@ class String
     tr("'", '’')
       .gsub(/\bSec\./, '§')
       .gsub(/"([^"]+)"/, '“\1”')
+  end
+
+  def add_html_typography
+    gsub(%r{\b(\d+)/(\d+)\b}, '<sup>\1</sup>&frasl;<sub>\2</sub>')
   end
 
   #
@@ -105,13 +109,14 @@ class String
   def capitalize_first_letter
     return '' if self == ''
 
-    new_string = self.clone(freeze: false)
+    new_string = clone(freeze: false)
     new_string.capitalize_first_letter!
     new_string
   end
 
   def capitalize_first_letter!
     return self if self == ''
+
     self[0] = self[0].upcase
   end
 end
