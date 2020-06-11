@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    law_string (1.1.0)
+    law_string (1.2.0)
 
 GEM
   remote: https://rubygems.org/
@@ -33,11 +33,10 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bundler (~> 1.16)
   law_string!
   rake (~> 10.0)
   rspec (~> 3.0)
   simplecov
 
 BUNDLED WITH
-   1.16.1
+   2.1.4
