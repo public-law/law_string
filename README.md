@@ -1,6 +1,5 @@
-[#](#) LawString
-
-[![Build Status](https://travis-ci.com/public-law/law_string.svg?branch=master)](https://travis-ci.com/public-law/law_string)
+LawString
+=========
 
 A few string util functions which support the [Public.Law](https://www.public.law) apps. Optimized for reduced object instantiation
 at the expense of readability.
