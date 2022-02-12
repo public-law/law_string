@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    law_string (1.2.1)
+    law_string (1.2.2)
 
 GEM
   remote: https://rubygems.org/
