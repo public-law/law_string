@@ -6,24 +6,35 @@ require 'set'
 # Specialized #titleize and #add_typography methods.
 class String
   # For AP Style Titles
+  # A decent article: https://prowritingaid.com/list-of-words-not-capitalized-in-titles
   NOT_CAPITALIZED = Set.new %w[
-    a 
-    an 
-    and 
-    at 
-    but 
-    by 
-    for 
-    in 
+    a
+    an
+    and
+    as
+    at
+    but
+    by
+    down
+    for
+    from
+    if
+    in
+    into
+    near
     nor 
-    of 
-    on 
-    or 
+    of
+    on
+    onto
+    or
+    over
     out 
     so 
-    the 
-    to 
-    up 
+    than
+    that
+    the
+    to
+    up
     with 
     yet
   ].freeze
