@@ -6,7 +6,28 @@ require 'set'
 # Specialized #titleize and #add_typography methods.
 class String
   # For AP Style Titles
-  NOT_CAPITALIZED = Set.new %w[a an and at but by for in nor of on or out so the to up with yet].freeze
+  NOT_CAPITALIZED = Set.new %w[
+    a 
+    an 
+    and 
+    at 
+    but 
+    by 
+    for 
+    in 
+    nor 
+    of 
+    on 
+    or 
+    out 
+    so 
+    the 
+    to 
+    up 
+    with 
+    yet
+  ].freeze
+
   INITIALISMS     = Set.new %w[atm].freeze
 
   INITIALS_REGEX  = /^([a-zA-Z]\.)+$/.freeze

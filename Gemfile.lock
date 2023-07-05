@@ -1,14 +1,14 @@
 PATH
   remote: .
   specs:
-    law_string (1.2.2)
+    law_string (1.2.3)
 
 GEM
   remote: https://rubygems.org/
   specs:
     diff-lcs (1.5.0)
     docile (1.4.0)
-    rake (12.3.3)
+    rake (13.0.6)
     rspec (3.12.0)
       rspec-core (~> 3.12.0)
       rspec-expectations (~> 3.12.0)
@@ -34,9 +34,9 @@ PLATFORMS
 
 DEPENDENCIES
   law_string!
-  rake (~> 12.3)
-  rspec (~> 3.0)
+  rake
+  rspec
   simplecov
 
 BUNDLED WITH
-   2.2.28
+   2.4.15
