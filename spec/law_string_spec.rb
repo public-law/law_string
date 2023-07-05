@@ -60,6 +60,10 @@ RSpec.describe String do
       expect(input.titleize).to eq expected
     end
 
+    it 'handles "with"' do
+      expect('The dog with a bone'.titleize).to eq 'The Dog with a Bone'
+    end
+
     it 'does capitalize short verbs' do
       expect('The dog is home'.titleize).to eq 'The Dog Is Home'
     end
