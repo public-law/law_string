@@ -55,8 +55,8 @@ RSpec.describe String do
 
   describe '#titleize' do
     it 'knows about some initialisms' do
-      input    = 'ATM TRANSACTIONS BY PERSONS USING FOREIGN BANK ACCOUNTS'
-      expected = 'ATM Transactions by Persons Using Foreign Bank Accounts'
+      input    = 'ATM TRANSACTIONS BY PERSONS USING USA BANK ACCOUNTS'
+      expected = 'ATM Transactions by Persons Using USA Bank Accounts'
       expect(input.titleize).to eq expected
     end
 

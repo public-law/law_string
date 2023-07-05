@@ -28,7 +28,7 @@ class String
     yet
   ].freeze
 
-  INITIALISMS     = Set.new %w[atm].freeze
+  INITIALISMS = Set.new %w[atm usa].freeze
 
   INITIALS_REGEX  = /^([a-zA-Z]\.)+$/.freeze
   WHITESPACES_REGEX = /[[:space:]]/.freeze
