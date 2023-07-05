@@ -6,8 +6,40 @@ require 'set'
 # Specialized #titleize and #add_typography methods.
 class String
   # For AP Style Titles
-  NOT_CAPITALIZED = Set.new %w[a an and at but by for in nor of on or out so the to up yet].freeze
-  INITIALISMS     = Set.new %w[atm].freeze
+  # A decent article: https://prowritingaid.com/list-of-words-not-capitalized-in-titles
+  NOT_CAPITALIZED = Set.new %w[
+    a
+    an
+    and
+    as
+    at
+    but
+    by
+    down
+    for
+    from
+    if
+    in
+    into
+    near
+    nor 
+    of
+    on
+    onto
+    or
+    over
+    out 
+    so 
+    than
+    that
+    the
+    to
+    up
+    with 
+    yet
+  ].freeze
+
+  INITIALISMS = Set.new %w[atm usa].freeze
 
   INITIALS_REGEX  = /^([a-zA-Z]\.)+$/.freeze
   WHITESPACES_REGEX = /[[:space:]]/.freeze
